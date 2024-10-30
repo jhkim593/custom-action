@@ -9,7 +9,7 @@ inputs: # 2
 
 outputs: # 3
   sum-result:
-    value: ${ { steps.sum.outputs.result } }
+    value: ${{steps.sum.outputs.result}}
     description: sum result
 
 runs:
