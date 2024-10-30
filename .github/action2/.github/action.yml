@@ -1,0 +1,20 @@
+name: Sum # 1
+description: Sum
+
+inputs: # 2
+  x:
+    default: 0
+  y:
+    default: 0
+
+outputs: # 3
+  sum-result:
+    value: ${ { steps.sum.outputs.result } }
+    description: sum result
+
+runs:
+  using: "composite" # 4
+  steps:
+    - id: sum
+      shell: bash
+      run: echo "result=$((${ { inputs.x  } } * ${ { inputs.y  } }))" >> $GITHUB_OUTPUT # 5
