@@ -17,4 +17,4 @@ runs:
   steps:
     - id: sum
       shell: bash
-      run: echo "result=$((${ { inputs.x  } } + ${ { inputs.y  } }))" >> $GITHUB_OUTPUT # 5
+      run: echo "result=$(${ { inputs.x  } } + ${ { inputs.y  } })" >> $GITHUB_OUTPUT # 5
